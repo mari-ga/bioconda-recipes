@@ -1,0 +1,56 @@
+{% set version = "2.5" %}
+{% set sha256 = "a017cf985e78c39c899c5e2d43a7a1ff940f61c79145b6c4b1112e9bf8433de1" %}
+
+
+package:
+  name: souporcell
+  version: {{version}}
+
+source:
+  url: https://github.com/wheaton5/souporcell/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: generic
+  run_exports:
+    - {{ pin_subpackage('souporcell', max_pin="x.x") }}
+
+requirements:
+  build:
+    - python 
+    - setuptools
+    - samtools
+    - umi_tools
+    - scikit-learn
+    - bcftools
+    - htslib
+    - freebayes
+    - minimap2
+    - vartrix
+    - tensorflow
+    - pyvcf
+    - pystan
+    - pyfaidx
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - pandas
+    - scikit-learn
+    - samtools
+    - bcftools
+    - htslib
+    - freebayes
+    - minimap2
+    - vartrix
+    - tensorflow
+    - pyvcf
+    - pystan
+    - pyfaidx
+
+test:
+  commands:
+    - python setup.py test
+
