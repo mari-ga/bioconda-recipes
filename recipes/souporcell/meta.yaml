@@ -1,5 +1,5 @@
 {% set version = "2.5" %}
-{% set sha256 = "a017cf985e78c39c899c5e2d43a7a1ff940f61c79145b6c4b1112e9bf8433de1" %}
+{% set sha256 = "1404b87e44c4452b2f329abb81ce4a8383ed5b7e94f38ff2815c5bed62ec2c7f" %}
 
 
 package:
@@ -7,7 +7,7 @@ package:
   version: {{version}}
 
 source:
-  url: https://github.com/wheaton5/souporcell/archive/v{{ version }}.tar.gz
+  url: https://github.com/wheaton5/souporcell/archive/refs/tags/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -20,6 +20,7 @@ requirements:
   build:
     - python 
     - setuptools
+    - rust
     - samtools
     - umi_tools
     - scikit-learn
@@ -52,5 +53,8 @@ requirements:
 
 test:
   commands:
-    - python setup.py test
+    - python -c "import souporcell"
 
+about:
+  home: https://github.com/wheaton5/souporcell
+  license: MIT
