@@ -1,5 +1,5 @@
 {% set name = "fgpyo" %}
-{% set version = "0.2.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/fulcrumgenomics/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 2555357c1c6d9ca02e1b2335221dcae5edd288d307ba617ab648ee7b10a25ea5
+  sha256: 0d0b0d6f2e365c136830e803e4a6d56fe20c6d615a4b857b423f19c51b700bab
 
 build:
   noarch: python
