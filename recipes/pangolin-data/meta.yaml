@@ -1,4 +1,4 @@
-{% set version = "1.26" %}
+{% set version = "1.30" %}
 
 package:
   name: pangolin-data
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/cov-lineages/pangolin-data/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6aed4738a29260d616654d69c79c540de1b547139cb51b54670970b023aba4bd
+  sha256: e289ee774c133238294aa2bfa5d331ed89047ffc67af8e3614c01a51ffd46b43
 
 build:
   number: 0

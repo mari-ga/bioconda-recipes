@@ -1,5 +1,5 @@
 {% set name = "hybracter" %}
-{% set version = "0.7.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hybracter-{{ version }}.tar.gz
-  sha256: 1edd91904d91d9fd17889f7e762acda33f92fe5f8553d2e055a2b6bff8778c45
+  sha256: 5b0d928520d1ead9d3007b48903f6a895a44243324f6b71276de08c896b16ae0
 
 build:
   number: 0
